@@ -1,0 +1,12 @@
+.container-fluid{
+    background-color: silver;
+    padding-top: 50px;
+}
+.text {
+    color: slategrey;
+    font-size: 25px;
+    margin: 20px;
+}
+#encabezado{
+    margin-left: 50px;
+}
