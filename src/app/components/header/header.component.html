@@ -1,32 +1,35 @@
-<div class="container-fluid">
-<div class="row">
-  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
-    <img src="/assets/APLogo.png" id="logo" alt="logo" />
-  </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/dashboard" *ngIf="isLogin">Dashboard</a>
+          </li>
+        
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-success" type="button" *ngIf="!isLogin" routerLink="/login">Login</button>
+          <button class="btn btn-outline-success" type="button" *ngIf="isLogin" (click)="btnLogout()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-    <a href=""><img src="/assets/in.png" class="social" alt="liImage" /></a>
-    <a href=""><img src="/assets/tw.png" class="social" alt="twImage" /></a>
-  </div>
 
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img src="/assets/banner.png" id="banner" alt="logo" />
-  </div>
-
-  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-    <img src="/assets/APLogo.png" id="perfil" alt="" class="img-fluid"/>
-  </div>
-
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-    <h1 class="text">Acerca de mi</h1>
-    <p class="p2"> En esta sección se encuentra tu foto de perfil, nombre y titulo que tienes
-      (Full Stack Developer Jr); En esta sección debes poner información
-      profesional resumida sobre vos.</p>
-  </div>
-
-  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="nombre">
-    <p class="nombre"> <strong>Dany Gonzalez</strong></p>
-    <p class="p1">Full Stack Developer Jr</p>
-  </div>
-</div>
-</div>
+</header>

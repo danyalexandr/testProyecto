@@ -1,34 +1,18 @@
-<html>
+<div class="row my-5">
+    <div class="col-sm-11 col-md-6 col-lg-4 mx-auto my-auto card">
+     <form method="post">
+        <div class="form-outline mb-4">
+            <label class="form-label" for="loginTxtEmail">Email</label>
+            <input type="email" id="loginTxtEmail" class="form-control" name="loginTxtEmail">
+        </div>
 
-<body>
-
-
-<button class="open-button" onclick="openForm()">Open Form</button>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="loginTxtPwd">Password</label>
+            <input type="password" id="loginTxtPwd" class="form-control" name="loginTxtPwd">
+        </div>
+        
+        <button type="button" class="btn btn-primary btn-block mb-4 col-12
+        col-sm-12 col-md-6" (click)="btnLogin()">Iniciar sesion</button>
+     </form>   
+    </div>
 </div>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
-</body>
-</html>
